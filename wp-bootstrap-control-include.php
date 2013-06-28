@@ -18,10 +18,9 @@ function wbci_enqueue_js_css () {
     wp_enqueue_style('bootstrap-css');
     wp_enqueue_style('bootstrap-responsive-css');
 
-    wp_register_script('bootstrap-js', plugins_url('bootstrap.js', __FILE__) );
-    wp_enqueue_script('bootstrap-js', null, array('jquery'), null, true);
+    wp_enqueue_script('bootstrap-js', plugins_url('bootstrap.js', __FILE__), array('jquery'), null, true);
   }
 }
-add_action('wp_enqueue_scripts', 'wbci_enqueue_js_css', 1001);
+add_action('wp_enqueue_scripts', 'wbci_enqueue_js_css');
 
 ?>
